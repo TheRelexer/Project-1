@@ -1,3 +1,15 @@
+/*
+@font-face {
+  font-family: 'BD Cartoon Shout';
+  src: url('http://www.fontsaddict.com/fontface/bd-cartoon-shout.ttf');
+}
+*/
+@import url(http://allfont.net/allfont.css?fonts=bd-cartoon-shout);
+
+* {
+  box-sizing: border-box;
+  font-size: 8px;
+}
 html, body {
   /*hide bg beheind content*/
   z-index: -10;
@@ -31,4 +43,103 @@ html, body {
   position: relative;
   width: 75%;
   margin: 0;
+}
+
+.oval {
+  z-index: -2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-48%) translateY(-50%);
+  /*X would be 50% but oval is askew on logo*/
+
+  width: 28.7rem;
+  height: 10.7rem;
+
+
+}
+
+h1 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 5rem;
+  font-family: 'BD Cartoon Shout', cursive;
+  text-shadow:
+    /*dropshadow*/
+    0.075em 0.075em 0.1px #798DDF,
+    /*thin stroke backup if webkit incompatible*/
+    2px 0 #798DDF,
+    -2px 0 #798DDF,
+    0 2px #798DDF,
+    0 -2px #798DDF;
+  /*keeps return character in pseudo-element working*/
+  white-space: pre;
+}
+
+/*
+hack for outside stroke. css uses center stroke, see here:
+https://css-tricks.com/adding-stroke-to-web-text
+*/
+h1::before {
+  position: absolute;
+  z-index: -1;
+  /*thin stroke*/
+  -webkit-text-stroke: 5px #798DDF;
+  content: "GAME\00000aGRUMPS";
+  /*content: "GAME\00000aGRUMPS\00000aIRC";*/
+
+  /*shitty alignment fix*/
+  width: 100%;
+  left: 0;
+}
+#gg_shadow {
+  position: absolute;
+  z-index: -3;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 5rem;
+  font-family: 'BD Cartoon Shout', cursive;
+    white-space: pre;
+  /*thin stroke*/
+  -webkit-text-stroke: 1.7rem #798DDF;
+  /*content: "GAME\00000aGRUMPS\00000aIRC";*/
+
+  /*shitty alignment fix*/
+  width: 100%;
+  left: 0;
+  top: 0.3rem;
+}
+.chat {
+  display: block;
+  margin: 0 auto;
+  right: 0;
+  top: 0;
+  min-width: 25rem;
+  width: 20%;
+  /*max-width: 50rem;*/
+  height: 100%;
+  position: absolute;
+}
+
+}
+
+
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: inherit;
+  font-family: 'BD Cartoon Shout', cursive;
+  text-shadow:
+    /*dropshadow*/
+    0.075em 0.075em 0.1px #798DDF,
+    /*thin stroke backup if webkit incompatible*/
+    2px 0 #798DDF,
+    -2px 0 #798DDF,
+    0 2px #798DDF,
+    0 -2px #798DDF;
 }
