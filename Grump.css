@@ -1,0 +1,34 @@
+html, body {
+  /*hide bg beheind content*/
+  z-index: -10;
+  position: relative;
+  /*default margin fix*/
+  margin: 0;
+  /*allows percentage-based children*/
+  width: 100%;
+  height:100%;
+  /*hides the outsides of the rotated div*/
+  overflow: hidden;
+  /*first half of the background, the dots*/
+  background: linear-gradient(#EC8331,#F2974C);
+}
+
+.bg {
+  z-index: -9;
+  width:200%;
+  height:200%;
+  position: absolute;
+  top:-50%;
+  left:-50%;
+  transform: rotate(-15deg);
+  /*transparent holes, aka swiss cheese effect*/
+  background:
+    -webkit-radial-gradient(transparent 40%, #F2A74C 60%);
+  background-size: 30px 30px;
+}
+
+.logo {
+  position: relative;
+  width: 75%;
+  margin: 0;
+}
