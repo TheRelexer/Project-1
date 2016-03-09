@@ -113,17 +113,7 @@ h1::before {
   left: 0;
   top: 0.3rem;
 }
-.chat {
-  display: block;
-  margin: 0 auto;
-  right: 0;
-  top: 0;
-  min-width: 25rem;
-  width: 20%;
-  /*max-width: 50rem;*/
-  height: 100%;
-  position: absolute;
-}
+
 
 }
 
